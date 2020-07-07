@@ -1,0 +1,46 @@
+{
+  "name": "vue-admin-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve --mode dev",
+    "sit": "vue-cli-service serve --mode sit",
+    "prod": "vue-cli-service serve --mode prod",
+    "build:dev": "vue-cli-service build --mode dev",
+    "build:sit": "vue-cli-service build --mode sit",
+    "build:prod": "vue-cli-service build --mode prod",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "ant-design-vue": "^1.6.2",
+    "axios": "^0.19.2",
+    "core-js": "^3.6.5",
+    "js-cookie": "^2.2.1",
+    "moment": "^2.26.0",
+    "nprogress": "^0.2.0",
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.4.0",
+    "@vue/cli-plugin-eslint": "~4.4.0",
+    "@vue/cli-plugin-router": "~4.4.0",
+    "@vue/cli-plugin-unit-jest": "~4.4.0",
+    "@vue/cli-plugin-vuex": "~4.4.0",
+    "@vue/cli-service": "~4.4.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/test-utils": "^1.0.3",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-import": "^1.13.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-vue": "^6.2.2",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "prettier": "^1.19.1",
+    "svg-sprite-loader": "^5.0.0",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
