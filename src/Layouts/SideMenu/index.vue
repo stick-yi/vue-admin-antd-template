@@ -1,7 +1,12 @@
 <template>
   <div class="side-menu">
     <logo class="logo" />
-    <a-menu theme="dark" :selectedKeys="selectedKeys" mode="inline">
+    <a-menu
+      theme="dark"
+      :selectedKeys="selectedKeys"
+      :openKeys.sync="openKeys"
+      mode="inline"
+    >
       <template v-for="item in menu">
         <a-menu-item
           v-if="!item.children"
@@ -31,17 +36,32 @@ export default {
     }
   },
   data() {
-    return {};
+    return {
+      openKeys: this.collapsed
+        ? []
+        : [this.$route.path.substr(0, this.$route.path.lastIndexOf('/'))]
+    };
   },
   computed: {
     ...mapGetters(['menu']),
-    // 选中
+    // 选中菜单
     selectedKeys() {
       return [this.$route.path];
     }
   },
-  mounted() {},
-  methods: {}
+  watch: {
+    collapsed: {
+      handler(val) {
+        if (val) {
+          this.openKeys = [];
+        } else {
+          this.openKeys = [
+            this.$route.path.substr(0, this.$route.path.lastIndexOf('/'))
+          ];
+        }
+      }
+    }
+  }
 };
 </script>
 
